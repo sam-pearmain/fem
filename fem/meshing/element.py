@@ -13,6 +13,9 @@ class ElementType(Enum):
 
 @dataclass
 class Element(ABC):
+    def __init__(self, nodes: tuple):
+        self.nodes = nodes
+
     @abstractmethod
     def get_element_type(self) -> ElementType:
         pass
